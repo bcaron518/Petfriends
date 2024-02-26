@@ -11,7 +11,7 @@ const SignUpForm = ({ onSignUp }) => {
 
   return (
     <div>
-      <h2>Sign Up Form</h2>
+      <h2>Sign Up</h2>
       <label>
         Username:
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
