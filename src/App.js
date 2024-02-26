@@ -7,10 +7,10 @@ import AboutPage from './AboutPage';
 import './App.css'; // Import the App.css file
 
 const Home = () => (
-  <div className="app-container">
+  <>
     <h2>Home Page</h2>
     {/* Add your home page content */}
-  </div>
+  </>
 );
 
 const App = () => {
@@ -34,10 +34,11 @@ const App = () => {
 
   return (
     <Router>
-      <div className="app-container">
+      <>
         <h1>Pet Friends (Adopt a pet)</h1>
-        <Link to="/login">Login</Link> | <Link to="/signup">Sign Up</Link> | <Link to="/forgot-password">Forgot Password</Link> | <Link to="/about">About</Link>
-        <br />
+        <nav>
+          <Link to="/login">Login</Link> | <Link to="/signup">Sign Up</Link> | <Link to="/forgot-password">Forgot Password</Link> | <Link to="/about">About</Link>
+        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<LoginForm onLogin={handleLogin} onForgotPassword={handleForgotPassword} />} />
@@ -45,8 +46,9 @@ const App = () => {
           <Route path="/forgot-password" element={<ForgotPasswordForm onResetPassword={handleResetPassword} />} />
           <Route path="/about" element={<AboutPage />} />
           {/* Add other routes as needed */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
-      </div>
+      </>
     </Router>
   );
 };
