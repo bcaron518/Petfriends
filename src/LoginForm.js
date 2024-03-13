@@ -3,24 +3,37 @@ import React, { useState } from 'react';
 const LoginForm = ({ onLogin, onForgotPassword }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleLogin = () => {
-    // Add your authentication logic here
+    if (!username || !password) {
+      setError('Please enter both username and password.');
+      return;
+    }
+
+    // Add authentication logic here (e.g., call an API)
+    // For demonstration purposes, assume successful login if username and password are correct
     if (username === 'yourUsername' && password === 'yourPassword') {
       onLogin(username);
     } else {
-      alert('Invalid username or password');
+      setError('Invalid username or password');
     }
   };
 
   const handleForgotPassword = () => {
-    // Add your forgot password logic here
+    if (!username) {
+      setError('Please enter your username.');
+      return;
+    }
+
+    // Add your forgot password logic here (e.g., send a password reset email)
     onForgotPassword(username);
   };
 
   return (
     <div>
       <h2>Login</h2>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
       <label>
         Username:
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
