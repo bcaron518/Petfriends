@@ -7,7 +7,7 @@ import AdoptionProcess from './components/AdoptionProcess';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import PetList from './components/PetList';
-import './App.css'; // Import your CSS file
+import './App.css';
 
 function App() {
   return (
