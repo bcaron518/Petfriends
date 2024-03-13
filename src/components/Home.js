@@ -3,9 +3,7 @@ import React from 'react';
 const Home = () => {
   return (
     <div>
-      <h2 style={{ color: 'blue', fontSize: '50px', textAlign: 'center' }}>About Pet Friends</h2>
-      <h2>Welcome to PET FRIENDS our Pet Adoption Website!</h2>
-      <p>Find your new furry friend and give them a loving home.</p>
+      <h2 style={{ color: 'blue', fontSize: '50px', textAlign: 'center' }}>Welcome to PET FRIENDS</h2>
         <p style={{ color: 'blue', fontSize: '20px', textAlign: 'center' }}> 🏡🐾 Bringing Families and Furry Friends Together 🐾🏡 </p>
           <p>Once upon a time, in the charming town of Pawington, a group of passionate animal 
           lovers decided to embark on a mission to create a haven for furry friends and 
