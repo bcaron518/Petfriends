@@ -4,6 +4,7 @@ import LoginForm from './LoginForm';
 import SignUpForm from './SignUpForm';
 import ForgotPasswordForm from './ForgotPasswordForm';
 import AboutPage from './AboutPage';
+import PetDetails from './PetDetails'; // Import the PetDetails component
 import './App.css'; // Import the App.css file
 
 const Home = () => (
@@ -32,19 +33,18 @@ const App = () => {
     // Add your password reset logic here
   };
 
-  return (
+return (
     <Router>
       <>
-        <h1>Pet Friends (Adopt a pet)</h1>
-        <nav>
-          <Link to="/login">Login</Link> | <Link to="/signup">Sign Up</Link> | <Link to="/forgot-password">Forgot Password</Link> | <Link to="/about">About</Link>
-        </nav>
+        {/* Your existing code */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<LoginForm onLogin={handleLogin} onForgotPassword={handleForgotPassword} />} />
           <Route path="/signup" element={<SignUpForm onSignUp={handleSignUp} />} />
           <Route path="/forgot-password" element={<ForgotPasswordForm onResetPassword={handleResetPassword} />} />
           <Route path="/about" element={<AboutPage />} />
+          {/* Add a route for pet details */}
+          <Route path="/pets/:petId" element={<PetDetails />} />
           {/* Add other routes as needed */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
