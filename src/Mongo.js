@@ -10,16 +10,37 @@ mongoose.connect("mongodb+srv://jcapwell:177654321Jc@cluster0.ovz9x6x.mongodb.ne
 
 const petSchema = new mongoose.Schema({
 
-    name:{
+    username:{
         type:String,
         required:true
+    },
+    password:{
+        type:String,
+        required:true
+    },
+    petfrence1:{
+        type:Number,
+
+    },
+    petfrence2:{
+        type:Number,
+
+    },
+    petfrence3:{
+        type:Number,
+
     }
 })
 
 const collection = new mongoose.model('Pets', petSchema)
 
 data={
-    name:"Testy"
+    username:"Testy",
+    password:"Password",
+    petfrence1: 1,
+    petfrence2: 2,
+    petfrence3: 3
+
 }
 
 collection.insertMany([data])
