@@ -1,29 +1,28 @@
 // App.js
 import React from 'react';
-import { Link, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Cats from './components/Cats';
+import Dogs from './components/Dogs';
+import Others from './components/Others';
 import AdoptionProcess from './components/AdoptionProcess';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
-import PetList from './components/PetList';
 import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="app-container">
-        <div className="navbar">
-          <Link to="/" className="nav-item">Home</Link>
-          <Link to="/pets" className="nav-item">Pets</Link>
-          <Link to="/adoption-process" className="nav-item">Adoption Process</Link>
-          <Link to="/login" className="nav-item">Login</Link>
-          <Link to="/signUp" className="nav-item">SignUp</Link>
-        </div>
+        <Navbar />
         <div className="content-container">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/pets" element={<PetList />} />
+            <Route path="/cats" element={<Cats />} />
+            <Route path="/dogs" element={<Dogs />} />
+            <Route path="/others" element={<Others />} />
             <Route path="/adoption-process" element={<AdoptionProcess />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signUp" element={<SignUp />} />
@@ -31,7 +30,7 @@ function App() {
         </div>
         <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
