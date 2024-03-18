@@ -2,16 +2,25 @@ import React from 'react';
 
 const AdoptionProcess = () => {
   return (
-    <div>
-      <h2>Adoption Process</h2>
-      <p>Follow these steps to adopt a pet:</p>
-      <ol>
-        <li>Fill out the adoption application form.</li>
-        <li>Wait for approval from our team.</li>
-        <li>Visit the adoption center to meet your potential pet.</li>
-        <li>Complete the adoption process and take your new friend home!</li>
-      </ol>
+    <div className="adoption-process-container">
+      <p>Adoption Application Online - Fill in Form</p>
+      <a
+        href="https://form.jotform.com/63622541099155"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: 'white',
+          backgroundColor: 'blue',
+          padding: '5px 10px',
+          border: '2px solid white',
+          borderRadius: '5px',
+          textDecoration: 'none', // Remove underline
+        }}
+      >
+        Adoption Application (Click Here)
+      </a>
     </div>
   );
 };
+
 export default AdoptionProcess;

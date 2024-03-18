@@ -1,9 +1,8 @@
 // Dogs.js
 import React from 'react';
-import './Dogs.css'; // Import CSS file for Dogs component
+import './Dogs.css'; 
 
 const Dogs = () => {
-  // Sample data for dogs
   const dogs = [
     {
       id: 1,
@@ -19,9 +18,34 @@ const Dogs = () => {
       age: 2,
       breed: 'Golden Retriever',
       availableForAdoption: false,
-      image: 'bailey.jpeg', // Placeholder image filename
+      image: 'bailey.jpeg',
     },
-    // Add more dogs as needed
+    {
+        id: 3,
+        name: 'Max',
+        age: 4,
+        breed: 'German Shepherd',
+        availableForAdoption: true,
+        image: 'max.jpeg',
+    },
+    {
+        id: 4,
+        name: 'Charlie',
+        age: 5,
+        breed: 'Poodle',
+        availableForAdoption: false,
+        image: 'charlie.jpeg',
+    },
+    {
+        id: 5,
+        name: 'Lucy',
+        age: 2,
+        breed: 'Beagle',
+        availableForAdoption: true,
+        image: 'lucy.jpeg',
+    },
+    
+    
   ];
 
   return (
